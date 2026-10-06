@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.pixel-font {
+  font-family: "Press Start 2P", monospace;
+  letter-spacing: -0.05em;
+}
+
+.minecraft-btn {
+  font-family: "Press Start 2P", monospace;
+  text-shadow: 2px 2px #000000;
+  box-shadow: inset -2px -4px #1b1b1b, inset 2px 2px #757575;
+}
+
+.minecraft-btn:active {
+  box-shadow: inset 2px 2px #1b1b1b, inset -2px -2px #757575;
+}
+
+.rajdhani-font {
+  font-family: "Rajdhani", sans-serif;
+}
+
+.pixel-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.theme-wood {
+  background-color: #24140a !important;
+  color: #f6ecdc !important;
+}
+
+.theme-wood .pixel-grid {
+  background-image: linear-gradient(rgba(122, 70, 36, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122, 70, 36, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px);
+  }
+}
+
+.animate-bounce-gentle {
+  animation: 3s ease-in-out infinite bounceGentle;
+}
+
+@keyframes particleRise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-105vh) translateX(25px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+.animate-particle-rise {
+  animation-name: particleRise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(53, 208, 111, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(53, 208, 111, 0.7);
+  }
+}
+
+.pulse-glow {
+  animation: 3s ease-in-out infinite pulseGlow;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: 3.5s ease-in-out infinite float;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards slideInRight;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgba(52, 211, 153, 0.4);
+  }
+  50% {
+    border-color: rgba(52, 211, 153, 0.9);
+  }
+}
+
+.animate-pulse-border {
+  animation: 2s infinite pulseBorder;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: 0.4s ease-in-out shake;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0%); }
+  100% { transform: translate(-50%); }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: 28s linear infinite marquee;
+  display: flex;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b120e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3a29;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #35d06f;
+}
+
+.theme-wood ::-webkit-scrollbar-track {
+  background: #2b180d;
+}
+
+.theme-wood ::-webkit-scrollbar-thumb {
+  background: #7a4624;
+  border-radius: 4px;
+}
+
+.theme-wood ::-webkit-scrollbar-thumb:hover {
+  background: #9d5a2d;
+}

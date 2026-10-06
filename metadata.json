@@ -1,0 +1,6 @@
+{
+  "name": "King's Studio Projects",
+  "description": "Official Minecraft projects hub for King's Studio featuring Crownlight Shaders, mods, modpacks, direct web downloads, and interactive ratings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
